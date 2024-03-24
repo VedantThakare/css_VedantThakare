@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Column wepage</title>
+  <style>
+    
+    .container {
+      display: flex;
+
+    }
+    .left-column, .right-column {
+      flex: 1;
+      padding: 200px;
+      margin: 0px;
+    }
+    .left-column {
+      background-color: lightgrey;
+    }
+    .right-column {
+      background-color: lightgreen;
+      font-family: Oswald;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    h1{
+
+      text-align: center;
+      font-size: "100";
+      font-family: monospace;
+      background-color: lavenderblush;
+    }
+    li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+    li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .left-column li::before {
+      background-color: indianred; 
+    }
+    .right-column li::before {
+      background-color: darkslategray; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Favourite LIST</h1>
+  <div class="container">
+    <div class="left-column">
+      <h2> Books on Amazon Kindle</h2>
+      <ul>
+        <li>The Teacher:A pyschological thriller</li>
+        <li>The Women:A Novel</li>
+        <li>Never Lie</li>
+        <li>Storms and Secrets</li>
+        <li>Ask for Andrea:A Thriller</li>
+      </ul>
+    </div>
+    <div class="right-column">
+      <h2>Favorite Actor</h2>
+      <ul>
+        <li>Sidharth Malhotra</li>
+        <li>Vicky Kaushal</li>
+        <li>Vijay Devarakonda</li>
+        <li>Allu Arjun</li>
+        <li>Salman Khan</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

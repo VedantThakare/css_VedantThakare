@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>notice page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 100;
+    }
+
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      animation: marquee-animation 15s linear infinite; 
+    }
+
+    @keyframes marquee-animation {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    .marquee::before {
+      content: "Notice: ";
+      color: red;
+      font-weight: bold;
+      font-size: 50px;
+    }
+
+    .marquee::after {
+      content: "Today is Holliday!";
+      color: orange;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="marquee"></div>
+</body>
+</html>
